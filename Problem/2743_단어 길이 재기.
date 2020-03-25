@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+
+main()
+{
+	char a[101];
+
+	scanf("%s", a);
+
+	printf("%d\n", strlen(a));
+}
