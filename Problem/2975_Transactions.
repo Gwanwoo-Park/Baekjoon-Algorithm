@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char sp = ' ';
+            while (true)
+            {
+                string t = Console.ReadLine();
+
+                string[] spstring = t.Split(sp);
+                int a = int.Parse(spstring[0]);
+                int b = int.Parse(spstring[2]);
+                if (a == 0 && b == 0) break;
+                if (spstring[1] == "W")
+                {
+                    if (a-b >= -200)
+                    {
+                        Console.WriteLine(a - b);
+                    }
+                    else 
+                    {
+                        Console.WriteLine("Not allowed");                    
+                    }
+                }
+                if (spstring[1] == "D")
+                {
+                    Console.WriteLine(a + b);
+                }
+            }
+        }
+    }
+}
